@@ -21,3 +21,4 @@ project/plugins/project/
 .eclipse
 .sbt_server
 .settings
+src/main/scala/Constants.scala

@@ -20,10 +20,12 @@ object Main {
     response.map {
       res =>  {
         println(s"${res.body.toString}")
+        WS.client.close()
       }
-    }.recover { case th => println(s"${th.getMessage}") }
-
-    WS.client.close()
+    }.recover { case th => {
+      println(s"${th.getMessage}")
+      WS.client.close()
+    } }
   }
 }
 

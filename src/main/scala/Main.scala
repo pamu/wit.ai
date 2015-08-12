@@ -23,7 +23,7 @@ object Main {
       }
     }.recover { case th => println(s"${th.getMessage}") }
 
-
+    WS.client.close()
   }
 }
 
